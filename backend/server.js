@@ -21,10 +21,10 @@ if (process.env.NODE_ENV === "production") {
   })
 }
 
-// console.log(process.env.MONGO_URI) 
 
+// Activate DB connection
 connectDB().then(() => {
-  // Port activation for listening
+  // Followed by port activation for listening
   app.listen(PORT, () => {
 
     console.log(`Server started at http://localhost:${PORT}`)
